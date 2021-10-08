@@ -6,10 +6,12 @@
 // console.log(base);
 const { crearArchivo } = require("./helpers/multiplicar");
 const argv = require("./config/yargs");
+var colors = require('colors');
+
 console.clear();
 crearArchivo(argv.base, argv.listar)
   .then(nombreArchivo =>
-    console.log(nombreArchivo, 'Exitosamente')
+    console.log(nombreArchivo, 'Exitosamente'.green)
   )
   .catch(err => console.log(err));
 

@@ -1,3 +1,6 @@
+var colors = require('colors');
+
+
 const argv = require('yargs').option('b',
   {
     alias: 'base',
@@ -15,7 +18,10 @@ const argv = require('yargs').option('b',
     })
   .check((argv, options) => {
     if (isNaN(argv.base)) {
-      throw `La base es un ${argv.b}, necesita un numero para trabajar correctamente`;
+      throw console.log(colors.red(
+        `La base es un ${argv.b}, necesita un numero para trabajar correctamente`)
+      );
+
     } else {
       return argv.base;
     }

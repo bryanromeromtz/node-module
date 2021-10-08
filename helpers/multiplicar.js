@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 // UTILIZAND NEW PROMISE CON RESOLVE , REJECT
 
 // const crearArchivo = (base) => {
@@ -23,8 +21,10 @@ const fs = require('fs');
 //   });
 // }
 
-// UTILIZAND NEW PROMISE CON RESOLVE , REJECT
+const fs = require('fs');
+const colors = require('colors');
 
+// UTILIZAND NEW PROMISE CON RESOLVE , REJECT
 const crearArchivo = async (base, listar = false) => {
 
   try {
@@ -36,19 +36,19 @@ const crearArchivo = async (base, listar = false) => {
     }
 
     if (listar) {
-      console.log('=====================');
-      console.log(`   Tabla del: ${base}`);
-      console.log('=====================');
-      console.log(salida);
+      console.log('====================='.bgGreen.red);
+      console.log(`   Tabla del: ${base}`.cyan.bold);
+      console.log('====================='.bgGreen.red);
+      console.log(salida.rainbow.bold);
     }
 
 
     fs.writeFileSync(`tabla-${base}.txt`, salida);
-    return `Archivo tabla-${base} Creado`;
+    return `Archivo tabla-${base} Creado`.green;
 
 
   } catch (error) {
-    trow`${error.message} El Archivo tabla-${base} No Se Pudo Crear`;
+    console.log(`${error.message} El Archivo tabla-${base} No Se Pudo Crear`.red);
   }
 
 
