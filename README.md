@@ -11,4 +11,5 @@ Opciones:
   -l, --listar   Lista la tabla creada               [booleano] [defecto: false]
   -h, --hasta    describe la longitud de la tabla a multiplicar
                                                           [número] [defecto: 10]
-                                                          ```
+        
+ ```
