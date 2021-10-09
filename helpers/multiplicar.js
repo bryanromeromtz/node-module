@@ -25,13 +25,13 @@ const fs = require('fs');
 const colors = require('colors');
 
 // UTILIZAND NEW PROMISE CON RESOLVE , REJECT
-const crearArchivo = async (base, listar = false) => {
+const crearArchivo = async (base, listar = false, largo = 10) => {
 
   try {
     let salida = ''
 
 
-    for (x = 1; x <= 10; x++) {
+    for (x = 1; x <= largo; x++) {
       salida += `${base} x ${x} = ${base * x}\n`;
     }
 

@@ -9,7 +9,7 @@ const argv = require("./config/yargs");
 var colors = require('colors');
 
 console.clear();
-crearArchivo(argv.base, argv.listar)
+crearArchivo(argv.base, argv.listar, argv.hasta)
   .then(nombreArchivo =>
     console.log(nombreArchivo, 'Exitosamente'.green)
   )
